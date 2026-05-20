@@ -64,22 +64,28 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                   <div className="flex justify-between items-center mt-sm">
                     <div className="flex items-center gap-md border border-outline-variant/50 rounded-full px-4 py-1">
                       <button 
-                        onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        className="text-on-surface-variant hover:text-primary transition-colors"
+                        onClick={() => {
+                          if (item.quantity <= 1) {
+                            removeFromCart(item.id);
+                          } else {
+                            updateQuantity(item.id, item.quantity - 1);
+                          }
+                        }}
+                        className="text-on-surface-variant hover:text-primary transition-colors p-1"
                       >
                         <span className="material-symbols-outlined text-sm">remove</span>
                       </button>
                       <span className="text-label-sm text-on-surface w-4 text-center">{item.quantity}</span>
                       <button 
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        className="text-on-surface-variant hover:text-primary transition-colors"
+                        className="text-on-surface-variant hover:text-primary transition-colors p-1"
                       >
                         <span className="material-symbols-outlined text-sm">add</span>
                       </button>
                     </div>
                     <button 
                       onClick={() => removeFromCart(item.id)}
-                      className="text-on-surface-variant hover:text-error transition-colors opacity-0 group-hover:opacity-100"
+                      className="text-on-surface-variant hover:text-error transition-colors p-2 -mr-2"
                     >
                       <span className="material-symbols-outlined text-xl">delete</span>
                     </button>

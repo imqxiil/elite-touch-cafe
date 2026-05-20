@@ -14,6 +14,7 @@ const CATEGORIES = ["ALL", "HOT DRINKS", "COLD DRINKS"];
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState("ALL");
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [addedItem, setAddedItem] = useState<string | null>(null);
   const { addToCart } = useCart();
   const { menuItems } = useMenu();
   const { heroConfig } = useSiteConfig();
@@ -24,7 +25,11 @@ export default function Menu() {
       quantity: 1,
       price: parseFloat(item.price.toString())
     });
-    setIsCartOpen(true);
+    
+    setAddedItem(item.id);
+    setTimeout(() => {
+      setAddedItem(null);
+    }, 1500);
   };
 
   const filteredItems = activeCategory === "ALL" 
@@ -97,9 +102,13 @@ export default function Menu() {
                 {/* Add to Cart Section */}
                 <button
                   onClick={() => handleAddToCart(item)}
-                  className="w-full py-4 border border-[#000666] text-[#000666] text-xs font-bold tracking-widest uppercase hover:bg-[#000666] hover:text-white transition-all duration-300"
+                  className={`w-full py-4 border border-[#000666] text-xs font-bold tracking-widest uppercase transition-all duration-300 ${
+                    addedItem === item.id 
+                      ? "bg-[#000666] text-white" 
+                      : "text-[#000666] bg-transparent hover:bg-[#000666] hover:text-white"
+                  }`}
                 >
-                  Add to Cart
+                  {addedItem === item.id ? "Added ✓" : "Add to Cart"}
                 </button>
               </div>
             ))}
