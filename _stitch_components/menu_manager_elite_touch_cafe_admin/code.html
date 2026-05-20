@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elite Touch Cafe - Menu Manager</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=EB+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#364486",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "surface-container-highest": "#e4e1ea",
+                        "surface-tint": "#4c56af",
+                        "surface": "#fbf8ff",
+                        "secondary-container": "#a7b5fe",
+                        "inverse-surface": "#303036",
+                        "surface-bright": "#fbf8ff",
+                        "on-secondary-fixed": "#001257",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#b9c3ff",
+                        "on-tertiary-fixed-variant": "#7b2e12",
+                        "secondary-fixed": "#dde1ff",
+                        "surface-container-high": "#eae7ef",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#390c00",
+                        "tertiary-fixed": "#ffdbd0",
+                        "on-error": "#ffffff",
+                        "secondary": "#4c5a9d",
+                        "surface-container-low": "#f5f2fb",
+                        "primary": "#000666",
+                        "surface-container": "#efecf5",
+                        "on-secondary-fixed-variant": "#344283",
+                        "on-primary-container": "#8690ee",
+                        "inverse-primary": "#bdc2ff",
+                        "on-primary-fixed-variant": "#343d96",
+                        "tertiary-container": "#5c1800",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#000767",
+                        "outline-variant": "#c6c5d4",
+                        "tertiary": "#380b00",
+                        "on-error-container": "#93000a",
+                        "outline": "#767683",
+                        "primary-fixed": "#e0e0ff",
+                        "on-tertiary-container": "#e17c5a",
+                        "on-surface-variant": "#454652",
+                        "on-background": "#1b1b21",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fbf8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#1a237e",
+                        "on-surface": "#1b1b21",
+                        "tertiary-fixed-dim": "#ffb59d",
+                        "surface-variant": "#e4e1ea",
+                        "surface-dim": "#dbd9e1",
+                        "inverse-on-surface": "#f2eff8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "xxl": "80px",
+                        "lg": "24px",
+                        "xl": "48px",
+                        "unit": "4px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["DM Sans"],
+                        "headline-md": ["EB Garamond"],
+                        "display-lg-mobile": ["EB Garamond"],
+                        "headline-sm": ["EB Garamond"],
+                        "display-lg": ["EB Garamond"],
+                        "body-md": ["DM Sans"],
+                        "label-sm": ["DM Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dotted-leader {
+            border-bottom: 1px dotted var(--tw-colors-outline-variant);
+            flex-grow: 1;
+            margin: 0 16px;
+            position: relative;
+            top: -6px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex">
+<!-- SideNavBar (from JSON) -->
+<nav class="bg-surface dark:bg-inverse-surface fixed left-0 top-0 h-full w-64 border-r-[0.5px] border-outline-variant dark:border-outline flex flex-col py-lg px-md z-20">
+<div class="mb-xl px-sm">
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">Elite Touch Cafe</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-xs">Admin Dashboard</p>
+</div>
+<ul class="flex-1 space-y-sm">
+<li>
+<a class="flex items-center gap-md px-sm py-sm rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md px-sm py-sm rounded-lg text-primary dark:text-primary-fixed-dim font-bold border-r-2 border-primary dark:border-primary-fixed-dim bg-surface-container-low opacity-80 scale-[0.99] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-label-sm text-label-sm">Menu</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md px-sm py-sm rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="collections">collections</span>
+<span class="font-label-sm text-label-sm">Gallery</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md px-sm py-sm rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="image_aspect_ratio">image_aspect_ratio</span>
+<span class="font-label-sm text-label-sm">Hero Banner</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md px-sm py-sm rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span class="font-label-sm text-label-sm">Info &amp; Hours</span>
+</a>
+</li>
+</ul>
+<div class="mt-auto px-sm pt-lg border-t-[0.5px] border-outline-variant">
+<button class="w-full flex items-center justify-center gap-sm px-[32px] py-[12px] bg-primary text-on-primary font-label-sm text-label-sm rounded-lg hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                View Live Site
+            </button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-64 flex flex-col min-h-screen">
+<!-- TopNavBar (from JSON) -->
+<header class="bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-xl docked full-width top-0 border-b-[0.5px] border-outline-variant dark:border-outline flex justify-between items-center w-full px-margin-desktop py-sm z-10 sticky">
+<div class="flex-1">
+<!-- Search bar hidden as per JSON -->
+</div>
+<div class="flex items-center gap-lg">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 p-sm rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 p-sm rounded-full">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="flex items-center gap-sm ml-sm border-l-[0.5px] border-outline-variant pl-lg">
+<img alt="Admin User" class="w-10 h-10 rounded-full object-cover border-[0.5px] border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLuT8ezgwV-gFkcib_0Pxv7EYY5qRgCeF5WFjg_eycTt8TiMoCXvOMHnHKsUwywYKE9RutR3K2VT6A3QYHOK2OBWSCXmVinFpovHhzWdLSmWCsW0PvI7AwM4rt5xXJsm1vivIrA4iC-UHmubgTT6apot2nWWBq7K515iKq1oG8-yKXWnGnKpLYH5ks7ULp2TOlWPPzECoQxhf9jEmdEGNCfs4VzfMCQjfLTKb-TyJ7C38dKFHoaojHpOO-yppAXYL_bot6ESc5OD7r"/>
+<button class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors">Logout</button>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-margin-desktop max-w-[1280px] w-full mx-auto flex-1 flex flex-col gap-xl">
+<!-- Header Section -->
+<div class="flex justify-between items-end pb-sm border-b-[0.5px] border-outline-variant">
+<div>
+<h2 class="font-display-lg text-display-lg text-on-surface">Menu Items</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm">Manage your cafe's offerings across all categories.</p>
+</div>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-[32px] py-[12px] rounded-lg hover:bg-primary-container transition-colors shadow-[0_4px_20px_-2px_rgba(0,6,102,0.15)] flex items-center gap-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    Add New Item
+                </button>
+</div>
+<!-- Tabs -->
+<div class="flex gap-lg border-b-[0.5px] border-outline-variant/50">
+<button class="font-label-sm text-label-sm text-primary border-b-[1.5px] border-primary pb-sm px-sm tracking-widest uppercase">All</button>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary pb-sm px-sm tracking-widest uppercase transition-colors">Coffee</button>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary pb-sm px-sm tracking-widest uppercase transition-colors">Cold Drinks</button>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary pb-sm px-sm tracking-widest uppercase transition-colors">Food</button>
+</div>
+<!-- Data Table (Bento Style Card) -->
+<div class="bg-surface-container-lowest border-[0.5px] border-outline-variant rounded-xl overflow-hidden shadow-[0_2px_10px_-2px_rgba(0,0,0,0.02)]">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b-[0.5px] border-outline-variant bg-surface-container-low">
+<th class="font-label-sm text-label-sm text-on-surface-variant py-md px-lg font-medium">Image</th>
+<th class="font-label-sm text-label-sm text-on-surface-variant py-md px-lg font-medium">Item Name</th>
+<th class="font-label-sm text-label-sm text-on-surface-variant py-md px-lg font-medium">Category</th>
+<th class="font-label-sm text-label-sm text-on-surface-variant py-md px-lg font-medium text-right">Price</th>
+<th class="font-label-sm text-label-sm text-on-surface-variant py-md px-lg font-medium text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-[0.5px] divide-outline-variant/50">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-sm px-lg">
+<div class="w-12 h-12 rounded bg-surface-variant overflow-hidden border-[0.5px] border-outline-variant">
+<img alt="A beautifully poured latte art in a ceramic cup, viewed from top down. The lighting is soft and bright, emphasizing the high-end cafe aesthetic. A delicate, minimalist setting with natural light." class="w-full h-full object-cover" data-alt="A beautifully poured latte art in a ceramic cup, viewed from top down. The lighting is soft and bright, emphasizing the high-end cafe aesthetic. A delicate, minimalist setting with natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLUGbnb8LQ6ansMlqe414aKMl_au2dT4dvYfizGVP67sg2vMgEG8qHtbtL8lAS3Jkqx06r70EEDZbmWtPtjqKpTfO-l1mxWX2cpJ-m_aIYuyiFs69CxDSlk_EwGmyyILXvhFJhSjPx1t_mCPv4pOlGxBYw2URKw92KziyUcJjYn-aEzXOhO1zPvAeVDqLwid3GuT9nm-gjF0-Hdjw11OMZX5Z3FN6Ti2EeupyMWR2Fdcz_mGcQOQUR0YRnaTBpiU7UukqAwd4cGZhq"/>
+</div>
+</td>
+<td class="py-sm px-lg">
+<span class="font-headline-sm text-headline-sm text-on-surface">Artisan Latte</span>
+</td>
+<td class="py-sm px-lg">
+<span class="inline-block px-sm py-xs bg-secondary-container/20 text-on-secondary-container font-label-sm text-label-sm rounded-full tracking-wider">Coffee</span>
+</td>
+<td class="py-sm px-lg text-right">
+<span class="font-body-lg text-body-lg text-primary font-medium">$5.50</span>
+</td>
+<td class="py-sm px-lg text-center">
+<div class="flex items-center justify-center gap-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors rounded"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+<button class="p-xs text-on-surface-variant hover:text-error transition-colors rounded"><span class="material-symbols-outlined text-[20px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-sm px-lg">
+<div class="w-12 h-12 rounded bg-surface-variant overflow-hidden border-[0.5px] border-outline-variant">
+<img alt="A cold brew coffee served in a tall, elegant glass with ice cubes clinking. Soft afternoon sunlight highlights the rich amber tones of the coffee. Minimalist white marble background." class="w-full h-full object-cover" data-alt="A cold brew coffee served in a tall, elegant glass with ice cubes clinking. Soft afternoon sunlight highlights the rich amber tones of the coffee. Minimalist white marble background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPzYr2bbrJY7GGk24814xVgBOSXniOT0WcHCncNT_kfTTCm8f8IsVQEaPosS5UIrlJUE0T4fUyplZywWQLQ5Da8A1XnkxzBhS58tJQUW8SqjdO0lgJtEu26pUq-h1Sd0QFdPWHqwTjXnIu6ZCwEU3msuLTz9lsHzEOhHG1TxUYyO7UMe-aOp5mzqCCpxndpwhFDV0QI4wBoiL_paMqVHGekIBdVQDh6zM9mGDynLbCrAdtZDZFByNtSKjmWmfM0gyQgfoIMsQYwXE5"/>
+</div>
+</td>
+<td class="py-sm px-lg">
+<span class="font-headline-sm text-headline-sm text-on-surface">Kyoto Cold Brew</span>
+</td>
+<td class="py-sm px-lg">
+<span class="inline-block px-sm py-xs bg-secondary-container/20 text-on-secondary-container font-label-sm text-label-sm rounded-full tracking-wider">Cold Drinks</span>
+</td>
+<td class="py-sm px-lg text-right">
+<span class="font-body-lg text-body-lg text-primary font-medium">$6.00</span>
+</td>
+<td class="py-sm px-lg text-center">
+<div class="flex items-center justify-center gap-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors rounded"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+<button class="p-xs text-on-surface-variant hover:text-error transition-colors rounded"><span class="material-symbols-outlined text-[20px]">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-sm px-lg">
+<div class="w-12 h-12 rounded bg-surface-variant overflow-hidden border-[0.5px] border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-outline-variant">image</span>
+</div>
+</td>
+<td class="py-sm px-lg">
+<span class="font-headline-sm text-headline-sm text-on-surface">Avocado Tartine</span>
+</td>
+<td class="py-sm px-lg">
+<span class="inline-block px-sm py-xs bg-secondary-container/20 text-on-secondary-container font-label-sm text-label-sm rounded-full tracking-wider">Food</span>
+</td>
+<td class="py-sm px-lg text-right">
+<span class="font-body-lg text-body-lg text-primary font-medium">$12.50</span>
+</td>
+<td class="py-sm px-lg text-center">
+<div class="flex items-center justify-center gap-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors rounded"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+<button class="p-xs text-on-surface-variant hover:text-error transition-colors rounded"><span class="material-symbols-outlined text-[20px]">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Watermark Footer -->
+<div class="mt-auto pt-xl pb-lg flex justify-center opacity-30">
+<span class="font-headline-md text-headline-md text-primary italic">Et</span>
+</div>
+</div>
+</main>
+<!-- Modal Overlay (Add New Item) -->
+<!-- Hidden by default, showing for design representation -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-md bg-surface-variant/40 backdrop-blur-[20px] hidden">
+<div class="bg-surface-container-lowest w-full max-w-2xl rounded-xl border-[0.5px] border-outline-variant shadow-[0_10px_40px_-10px_rgba(0,6,102,0.15)] flex flex-col max-h-[921px] overflow-hidden">
+<!-- Modal Header -->
+<div class="flex items-center justify-between px-xl py-lg border-b-[0.5px] border-outline-variant bg-surface">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Add New Item</h3>
+<button class="text-on-surface-variant hover:text-error transition-colors p-sm rounded-full">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-xl overflow-y-auto flex-1 bg-surface-container-lowest flex flex-col gap-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Name Field -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Item Name</label>
+<input class="w-full bg-transparent border-b-[1px] border-outline-variant focus:border-primary px-0 py-sm font-body-md text-body-md text-on-surface placeholder:text-outline focus:ring-0 transition-colors" placeholder="e.g. Signature Espresso" type="text"/>
+</div>
+<!-- Category Field -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Category</label>
+<select class="w-full bg-transparent border-b-[1px] border-outline-variant focus:border-primary px-0 py-sm font-body-md text-body-md text-on-surface focus:ring-0 transition-colors appearance-none">
+<option value="">Select Category</option>
+<option value="coffee">Coffee</option>
+<option value="cold">Cold Drinks</option>
+<option value="food">Food</option>
+</select>
+</div>
+</div>
+<!-- Price Field -->
+<div class="flex flex-col gap-xs w-full md:w-1/2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Price</label>
+<div class="relative">
+<span class="absolute left-0 top-1/2 -translate-y-1/2 text-on-surface-variant font-body-md">$</span>
+<input class="w-full bg-transparent border-b-[1px] border-outline-variant focus:border-primary pl-md py-sm font-body-md text-body-md text-on-surface placeholder:text-outline focus:ring-0 transition-colors" placeholder="0.00" type="number"/>
+</div>
+</div>
+<!-- Description Field -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Description</label>
+<textarea class="w-full bg-transparent border-[0.5px] border-outline-variant rounded-lg focus:border-primary p-md font-body-md text-body-md text-on-surface placeholder:text-outline focus:ring-0 transition-colors resize-none" placeholder="Brief description of the item for the menu..." rows="3"></textarea>
+</div>
+<!-- Image Upload Area -->
+<div class="flex flex-col gap-xs mt-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Item Image</label>
+<div class="w-full h-32 border-2 border-dashed border-primary/30 rounded-lg bg-surface-container-low flex flex-col items-center justify-center cursor-pointer hover:bg-surface-container transition-colors group">
+<span class="material-symbols-outlined text-[32px] text-primary/50 group-hover:text-primary transition-colors mb-sm">cloud_upload</span>
+<span class="font-label-sm text-label-sm text-primary">Click to upload or drag and drop</span>
+<span class="font-body-md text-[12px] text-on-surface-variant mt-xs">SVG, PNG, JPG (max. 2MB)</span>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="flex items-center justify-end gap-md px-xl py-lg border-t-[0.5px] border-outline-variant bg-surface">
+<button class="font-label-sm text-label-sm text-on-surface-variant px-[32px] py-[12px] hover:text-primary transition-colors tracking-wider uppercase">Cancel</button>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-[32px] py-[12px] rounded-lg hover:bg-primary-container transition-colors shadow-[0_4px_20px_-2px_rgba(0,6,102,0.15)] tracking-wider uppercase">Save Item</button>
+</div>
+</div>
+</div>
+</body></html>

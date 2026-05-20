@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Menu - Elite Touch Cafe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=EB+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#e0e0ff",
+                        "secondary-fixed": "#dde1ff",
+                        "tertiary": "#380b00",
+                        "on-background": "#1b1b21",
+                        "surface": "#fbf8ff",
+                        "inverse-primary": "#bdc2ff",
+                        "secondary-container": "#a7b5fe",
+                        "outline-variant": "#c6c5d4",
+                        "surface-container-highest": "#e4e1ea",
+                        "on-secondary-fixed-variant": "#344283",
+                        "error": "#ba1a1a",
+                        "secondary": "#4c5a9d",
+                        "on-primary-fixed-variant": "#343d96",
+                        "tertiary-container": "#5c1800",
+                        "surface-bright": "#fbf8ff",
+                        "on-secondary-container": "#364486",
+                        "on-tertiary-fixed": "#390c00",
+                        "tertiary-fixed": "#ffdbd0",
+                        "surface-tint": "#4c56af",
+                        "background": "#fbf8ff",
+                        "inverse-on-surface": "#f2eff8",
+                        "inverse-surface": "#303036",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#b9c3ff",
+                        "on-primary-container": "#8690ee",
+                        "on-primary": "#ffffff",
+                        "outline": "#767683",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#001257",
+                        "on-tertiary-fixed-variant": "#7b2e12",
+                        "on-primary-fixed": "#000767",
+                        "on-tertiary-container": "#e17c5a",
+                        "surface-container-low": "#f5f2fb",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#454652",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#efecf5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e4e1ea",
+                        "surface-container-high": "#eae7ef",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "tertiary-fixed-dim": "#ffb59d",
+                        "primary-container": "#1a237e",
+                        "on-surface": "#1b1b21",
+                        "surface-dim": "#dbd9e1",
+                        "primary": "#000666"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "48px",
+                        "lg": "24px",
+                        "margin-desktop": "64px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "xxl": "80px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["DM Sans"],
+                        "body-md": ["DM Sans"],
+                        "headline-md": ["EB Garamond"],
+                        "label-sm": ["DM Sans"],
+                        "headline-sm": ["EB Garamond"],
+                        "display-lg": ["EB Garamond"],
+                        "display-lg-mobile": ["EB Garamond"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar Shared Component -->
+<header class="bg-surface border-b border-outline-variant docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-md max-w-7xl mx-auto">
+<div class="flex items-center gap-xl">
+<a class="text-headline-sm font-headline-sm text-primary tracking-tight" href="#">Elite Touch Cafe</a>
+<nav class="hidden md:flex gap-lg">
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 opacity-80 transition-all duration-300" href="#">Menu</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors px-2 py-1 rounded" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors px-2 py-1 rounded" href="#">Locations</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors px-2 py-1 rounded" href="#">Reservations</a>
+</nav>
+</div>
+<div class="flex items-center gap-md">
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<button class="hidden md:block bg-primary text-on-primary px-[32px] py-[12px] font-label-sm text-label-sm rounded hover:bg-primary-container transition-colors">
+                    Order Now
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-xxl flex flex-col gap-xl">
+<!-- Page Header -->
+<section class="flex flex-col items-center text-center gap-md max-w-3xl mx-auto mb-xl">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary">Curated Selections</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Explore our meticulously crafted offerings, designed to provide a moment of refined indulgence. 
+                Each item reflects our commitment to premium ingredients and quiet luxury.
+            </p>
+</section>
+<!-- Category Tabs -->
+<div class="flex justify-center border-b border-outline-variant mb-lg">
+<div class="flex gap-lg">
+<button class="px-md py-sm font-label-sm text-label-sm text-primary border-b-2 border-primary -mb-[1px]">COFFEE</button>
+<button class="px-md py-sm font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">COLD DRINKS</button>
+<button class="px-md py-sm font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">FOOD</button>
+</div>
+</div>
+<!-- Menu Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Item Card 1 -->
+<article class="bg-surface-container-lowest border border-[#e8eaf6] rounded-lg p-lg hover:shadow-[0_20px_40px_-15px_rgba(0,6,102,0.15)] transition-shadow duration-300 flex flex-col gap-md">
+<div class="w-full aspect-[4/3] bg-gradient-to-br from-primary-fixed to-surface-container rounded mb-sm relative overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+<span class="material-symbols-outlined text-primary text-[48px] opacity-20">coffee</span>
+</div>
+<div class="flex justify-between items-start gap-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Pour Over Estate</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs line-clamp-2">Single-origin Ethiopian beans, delicately brewed to highlight floral and citrus notes.</p>
+</div>
+<span class="font-headline-md text-body-lg text-primary mt-1 whitespace-nowrap">$6.00</span>
+</div>
+</article>
+<!-- Item Card 2 -->
+<article class="bg-surface-container-lowest border border-[#e8eaf6] rounded-lg p-lg hover:shadow-[0_20px_40px_-15px_rgba(0,6,102,0.15)] transition-shadow duration-300 flex flex-col gap-md">
+<div class="w-full aspect-[4/3] bg-gradient-to-br from-surface-container to-secondary-fixed rounded mb-sm relative overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 opacity-10 bg-[linear-gradient(45deg,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+<span class="material-symbols-outlined text-primary text-[48px] opacity-20">local_cafe</span>
+</div>
+<div class="flex justify-between items-start gap-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Signature Flat White</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs line-clamp-2">Velvety micro-foam folded over a robust double ristretto shot.</p>
+</div>
+<span class="font-headline-md text-body-lg text-primary mt-1 whitespace-nowrap">$5.50</span>
+</div>
+</article>
+<!-- Item Card 3 -->
+<article class="bg-surface-container-lowest border border-[#e8eaf6] rounded-lg p-lg hover:shadow-[0_20px_40px_-15px_rgba(0,6,102,0.15)] transition-shadow duration-300 flex flex-col gap-md">
+<div class="w-full aspect-[4/3] bg-gradient-to-br from-inverse-primary to-surface-container rounded mb-sm relative overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 opacity-10 bg-[repeating-linear-gradient(45deg,_transparent,_transparent_10px,_#000666_10px,_#000666_11px)]"></div>
+<span class="material-symbols-outlined text-primary text-[48px] opacity-20">water_drop</span>
+</div>
+<div class="flex justify-between items-start gap-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Cold Brew Reserve</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs line-clamp-2">Steeped for 24 hours, yielding a smooth, full-bodied profile with chocolate undertones.</p>
+</div>
+<span class="font-headline-md text-body-lg text-primary mt-1 whitespace-nowrap">$6.50</span>
+</div>
+</article>
+<!-- Item Card 4 -->
+<article class="bg-surface-container-lowest border border-[#e8eaf6] rounded-lg p-lg hover:shadow-[0_20px_40px_-15px_rgba(0,6,102,0.15)] transition-shadow duration-300 flex flex-col gap-md">
+<div class="w-full aspect-[4/3] bg-gradient-to-br from-surface-container to-primary-fixed-dim rounded mb-sm relative overflow-hidden flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[48px] opacity-20">bakery_dining</span>
+</div>
+<div class="flex justify-between items-start gap-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Almond Croissant</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs line-clamp-2">Flaky, buttery pastry filled with rich frangipane and dusted with powdered sugar.</p>
+</div>
+<span class="font-headline-md text-body-lg text-primary mt-1 whitespace-nowrap">$5.00</span>
+</div>
+</article>
+<!-- Item Card 5 -->
+<article class="bg-surface-container-lowest border border-[#e8eaf6] rounded-lg p-lg hover:shadow-[0_20px_40px_-15px_rgba(0,6,102,0.15)] transition-shadow duration-300 flex flex-col gap-md">
+<div class="w-full aspect-[4/3] bg-gradient-to-br from-tertiary-fixed to-surface-container rounded mb-sm relative overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-tertiary via-transparent to-transparent"></div>
+<span class="material-symbols-outlined text-tertiary text-[48px] opacity-20">tapas</span>
+</div>
+<div class="flex justify-between items-start gap-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Avocado Toast</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs line-clamp-2">Smashed avocado on artisanal sourdough, topped with microgreens and chili flakes.</p>
+</div>
+<span class="font-headline-md text-body-lg text-primary mt-1 whitespace-nowrap">$12.00</span>
+</div>
+</article>
+<!-- Item Card 6 -->
+<article class="bg-surface-container-lowest border border-[#e8eaf6] rounded-lg p-lg hover:shadow-[0_20px_40px_-15px_rgba(0,6,102,0.15)] transition-shadow duration-300 flex flex-col gap-md">
+<div class="w-full aspect-[4/3] bg-gradient-to-br from-surface-container to-secondary-container rounded mb-sm relative overflow-hidden flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[48px] opacity-20">Database</span>
+</div>
+<div class="flex justify-between items-start gap-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Ceremonial Matcha</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs line-clamp-2">Premium grade matcha whisked with oat milk for a vibrant, earthy finish.</p>
+</div>
+<span class="font-headline-md text-body-lg text-primary mt-1 whitespace-nowrap">$7.00</span>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="bg-surface border-t border-outline-variant full-width bottom-0 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-xxl gap-lg max-w-7xl mx-auto">
+<div class="text-headline-sm font-headline-sm text-primary">Elite Touch Cafe</div>
+<nav class="flex flex-col md:flex-row gap-lg items-center">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contact: 31011133</span>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 Elite Touch Cafe. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

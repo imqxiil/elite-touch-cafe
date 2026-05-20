@@ -1,0 +1,402 @@
+{
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\eslint.config.mjs": {
+    "mtime": 1778592182.7933142,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\next-env.d.ts": {
+    "mtime": 1778887947.8559854,
+    "ast_hash": "d0f8375ae1199dc7acd3977fc33b78b8",
+    "semantic_hash": "d0f8375ae1199dc7acd3977fc33b78b8"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\next.config.ts": {
+    "mtime": 1778592182.873551,
+    "ast_hash": "9b77af189a21a7a64e4bd7a426f64176",
+    "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\package.json": {
+    "mtime": 1778887418.7236145,
+    "ast_hash": "55ae350a6d8c88bec1699c89a7acf019",
+    "semantic_hash": "55ae350a6d8c88bec1699c89a7acf019"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\postcss.config.mjs": {
+    "mtime": 1778592182.8113463,
+    "ast_hash": "239f3ebf717465dc636818a1a619398d",
+    "semantic_hash": "239f3ebf717465dc636818a1a619398d"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\tsconfig.json": {
+    "mtime": 1779022196.5329907,
+    "ast_hash": "f4b7dd7de630adea0aeec73118580eee",
+    "semantic_hash": "f4b7dd7de630adea0aeec73118580eee"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\layout.tsx": {
+    "mtime": 1778945906.5068555,
+    "ast_hash": "3b577be2e9d02c6557d3cc67ec4efd10",
+    "semantic_hash": "3b577be2e9d02c6557d3cc67ec4efd10"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\page.tsx": {
+    "mtime": 1778947653.7471857,
+    "ast_hash": "94cf2409cc428b34e42907e00f36a69f",
+    "semantic_hash": "94cf2409cc428b34e42907e00f36a69f"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\about\\page.tsx": {
+    "mtime": 1778887637.440127,
+    "ast_hash": "c725c629dd043db3e01668450d0dc278",
+    "semantic_hash": "c725c629dd043db3e01668450d0dc278"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\admin\\layout.tsx": {
+    "mtime": 1778887720.915306,
+    "ast_hash": "6ce1310d2c2c9bf60a58b6037df18ca0",
+    "semantic_hash": "6ce1310d2c2c9bf60a58b6037df18ca0"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\admin\\page.tsx": {
+    "mtime": 1778937971.6372087,
+    "ast_hash": "d16510124af658644405148a84ecf757",
+    "semantic_hash": "d16510124af658644405148a84ecf757"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\admin\\dashboard\\page.tsx": {
+    "mtime": 1778952124.1640446,
+    "ast_hash": "932cceb917e86e37988f23b5c93c461e",
+    "semantic_hash": "932cceb917e86e37988f23b5c93c461e"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\admin\\gallery\\page.tsx": {
+    "mtime": 1778945076.3472123,
+    "ast_hash": "64e41e14a7131d62b815998be4d97b57",
+    "semantic_hash": "64e41e14a7131d62b815998be4d97b57"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\admin\\hero\\page.tsx": {
+    "mtime": 1778945916.8362212,
+    "ast_hash": "9cf8eead853c590cd943e32db03931cc",
+    "semantic_hash": "9cf8eead853c590cd943e32db03931cc"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\admin\\info\\page.tsx": {
+    "mtime": 1778945933.435963,
+    "ast_hash": "227b3e4811c1687730e56282abe24889",
+    "semantic_hash": "227b3e4811c1687730e56282abe24889"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\admin\\login\\page.tsx": {
+    "mtime": 1778887694.2482984,
+    "ast_hash": "cf7cad4e23a81f41600fbdd41320c934",
+    "semantic_hash": "cf7cad4e23a81f41600fbdd41320c934"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\admin\\menu\\page.tsx": {
+    "mtime": 1778939102.1634011,
+    "ast_hash": "a139e07c81545a8e893ee683e0f23d34",
+    "semantic_hash": "a139e07c81545a8e893ee683e0f23d34"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\checkout\\page.tsx": {
+    "mtime": 1778948361.8223863,
+    "ast_hash": "2681b1d5ae8751f642b11d0003d755d2",
+    "semantic_hash": "2681b1d5ae8751f642b11d0003d755d2"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\contact\\page.tsx": {
+    "mtime": 1778946474.5074973,
+    "ast_hash": "f183bda188b4f90017f8d8873a120a7e",
+    "semantic_hash": "f183bda188b4f90017f8d8873a120a7e"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\locations\\page.tsx": {
+    "mtime": 1778947204.0632796,
+    "ast_hash": "caadfb7013dc96b63a4fff6aae8c58ef",
+    "semantic_hash": "caadfb7013dc96b63a4fff6aae8c58ef"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\menu\\page.tsx": {
+    "mtime": 1778938650.7875488,
+    "ast_hash": "81921f070784d95c2a2cb2f237eb4ae0",
+    "semantic_hash": "81921f070784d95c2a2cb2f237eb4ae0"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\app\\order-confirmed\\page.tsx": {
+    "mtime": 1778887679.4220707,
+    "ast_hash": "4c2b1859132de9b84fcdc18d17027e5f",
+    "semantic_hash": "4c2b1859132de9b84fcdc18d17027e5f"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\components\\AdminHeader.tsx": {
+    "mtime": 1778887715.5051677,
+    "ast_hash": "402ca5c0f78e3766c50781e3c00f332f",
+    "semantic_hash": "402ca5c0f78e3766c50781e3c00f332f"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\components\\AdminSidebar.tsx": {
+    "mtime": 1778887707.8294199,
+    "ast_hash": "1b60327d7c8962e4296ac4171d65e7f5",
+    "semantic_hash": "1b60327d7c8962e4296ac4171d65e7f5"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\components\\CartDrawer.tsx": {
+    "mtime": 1778935572.3919556,
+    "ast_hash": "234b8235c96a40c55e679b84d56c162f",
+    "semantic_hash": "234b8235c96a40c55e679b84d56c162f"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\components\\Footer.tsx": {
+    "mtime": 1778945974.679456,
+    "ast_hash": "67fdb80f3ad71fec5155e142e524e5ad",
+    "semantic_hash": "67fdb80f3ad71fec5155e142e524e5ad"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\components\\Navbar.tsx": {
+    "mtime": 1778930725.184871,
+    "ast_hash": "8d3bd91ea6a6baeabfd10f11f66852a8",
+    "semantic_hash": "8d3bd91ea6a6baeabfd10f11f66852a8"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\components\\admin\\MenuItemModal.tsx": {
+    "mtime": 1778944099.4918838,
+    "ast_hash": "0dbe6a801a4f48ab7a3ebef6bd9aba00",
+    "semantic_hash": "0dbe6a801a4f48ab7a3ebef6bd9aba00"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\context\\CartContext.tsx": {
+    "mtime": 1778938744.0781925,
+    "ast_hash": "d345876172d1dc7a98cbe3cf0975e738",
+    "semantic_hash": "d345876172d1dc7a98cbe3cf0975e738"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\context\\GalleryContext.tsx": {
+    "mtime": 1779021625.6582131,
+    "ast_hash": "8868645d0be98af7284f12df89817a57",
+    "semantic_hash": "8868645d0be98af7284f12df89817a57"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\context\\MenuContext.tsx": {
+    "mtime": 1778938583.9661205,
+    "ast_hash": "cdcea40bf828c8411649ab5ce3589376",
+    "semantic_hash": "cdcea40bf828c8411649ab5ce3589376"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\src\\context\\SiteConfigContext.tsx": {
+    "mtime": 1779020377.6341364,
+    "ast_hash": "34e49c7244b6bbd9e756975aeb46a3f5",
+    "semantic_hash": "34e49c7244b6bbd9e756975aeb46a3f5"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\AGENTS.md": {
+    "mtime": 1778887499.7792993,
+    "ast_hash": "9e09241799026ac05be315a2f0b50055",
+    "semantic_hash": "9e09241799026ac05be315a2f0b50055"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\CLAUDE.md": {
+    "mtime": 1778887499.779961,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "semantic_hash": "5c27369b226fcf2be8a6cfe52224e767"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\README.md": {
+    "mtime": 1778592182.7635598,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": "f15aaa42d5d299d091b1171097ea56ad"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\about_elite_touch_cafe\\code.html": {
+    "mtime": 1778885115.8636868,
+    "ast_hash": "d3e25a3b823b49ba799af5e58c4cba6d",
+    "semantic_hash": "d3e25a3b823b49ba799af5e58c4cba6d"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\admin_login_elite_touch_cafe\\code.html": {
+    "mtime": 1778885115.6780238,
+    "ast_hash": "6329fc755e6a534d94f46c64e9128436",
+    "semantic_hash": "6329fc755e6a534d94f46c64e9128436"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\cart_drawer_elite_touch_cafe\\code.html": {
+    "mtime": 1778885115.75554,
+    "ast_hash": "fcbc273b4876a1ec98089f7830d49c15",
+    "semantic_hash": "fcbc273b4876a1ec98089f7830d49c15"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\checkout_elite_touch_cafe\\code.html": {
+    "mtime": 1778885115.7397552,
+    "ast_hash": "093d633660e99d94c52e3deb424d9f34",
+    "semantic_hash": "093d633660e99d94c52e3deb424d9f34"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\contact_elite_touch_cafe\\code.html": {
+    "mtime": 1778885115.7891438,
+    "ast_hash": "da302c7b647b69622d3f4775a3ca8a1b",
+    "semantic_hash": "da302c7b647b69622d3f4775a3ca8a1b"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\dashboard_elite_touch_cafe_admin\\code.html": {
+    "mtime": 1778885115.703733,
+    "ast_hash": "1d137b389ad2c0eee941f5266838ef73",
+    "semantic_hash": "1d137b389ad2c0eee941f5266838ef73"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\elite_touch_cafe\\DESIGN.md": {
+    "mtime": 1778885115.933359,
+    "ast_hash": "3b1920bd2eba85004fd75864007532a2",
+    "semantic_hash": "3b1920bd2eba85004fd75864007532a2"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\gallery_manager_elite_touch_cafe_admin\\code.html": {
+    "mtime": 1778885115.8277156,
+    "ast_hash": "6aa890575b67135d585db0757637161c",
+    "semantic_hash": "6aa890575b67135d585db0757637161c"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\hero_editor_elite_touch_cafe_admin\\code.html": {
+    "mtime": 1778885115.9006863,
+    "ast_hash": "57f36ef60ffc020a237b6c4d4da3e99c",
+    "semantic_hash": "57f36ef60ffc020a237b6c4d4da3e99c"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\home_with_coffee_background_elite_touch_cafe\\code.html": {
+    "mtime": 1778885115.8125577,
+    "ast_hash": "51300eb310116f5bbf4eb50fa0c36933",
+    "semantic_hash": "51300eb310116f5bbf4eb50fa0c36933"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\info_hours_elite_touch_cafe_admin\\code.html": {
+    "mtime": 1778885115.9171946,
+    "ast_hash": "bbebcf874ea0a348abe405baaa734b97",
+    "semantic_hash": "bbebcf874ea0a348abe405baaa734b97"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\menu_elite_touch_cafe\\code.html": {
+    "mtime": 1778885115.7169416,
+    "ast_hash": "371e1a2a298f89e45ea41d990a669f41",
+    "semantic_hash": "371e1a2a298f89e45ea41d990a669f41"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\menu_manager_elite_touch_cafe_admin\\code.html": {
+    "mtime": 1778885115.7753367,
+    "ast_hash": "f9aded26918f122faafc09f496350bad",
+    "semantic_hash": "f9aded26918f122faafc09f496350bad"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\menu_with_cart_elite_touch_cafe\\code.html": {
+    "mtime": 1778885115.8478694,
+    "ast_hash": "7f5ed3229075c5f2ab7b132d9759fa18",
+    "semantic_hash": "7f5ed3229075c5f2ab7b132d9759fa18"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\order_confirmed_elite_touch_cafe\\code.html": {
+    "mtime": 1778885115.8833897,
+    "ast_hash": "5b115f9132d690154d71497c5e2f54b1",
+    "semantic_hash": "5b115f9132d690154d71497c5e2f54b1"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\file.svg": {
+    "mtime": 1778592182.8113463,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\globe.svg": {
+    "mtime": 1778592182.8264315,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": "2aaafa6a49b6563925fe440891e32717"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\next.svg": {
+    "mtime": 1778592182.8432276,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": "8e061864f388b47f33a1c3780831193e"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\vercel.svg": {
+    "mtime": 1778592182.8535068,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\window.svg": {
+    "mtime": 1778592182.858368,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": "a2760511c65806022ad20adf74370ff3"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\images\\menu\\almond_croissant_plate_1778932228836.png": {
+    "mtime": 1778932228.8373826,
+    "ast_hash": "9937dad7be30c747a5bd2ed8ff2ce90d",
+    "semantic_hash": "9937dad7be30c747a5bd2ed8ff2ce90d"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\images\\menu\\cold_brew_glass_1778932067131.png": {
+    "mtime": 1778932067.1326756,
+    "ast_hash": "b8ab6b79974dd38def62b89c8cb9c89f",
+    "semantic_hash": "b8ab6b79974dd38def62b89c8cb9c89f"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\images\\menu\\flat_white_art_1778931981881.png": {
+    "mtime": 1778931981.8828428,
+    "ast_hash": "837d765493929efe5c2c3e72a1dda02a",
+    "semantic_hash": "837d765493929efe5c2c3e72a1dda02a"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\images\\menu\\locations_page_verify_1778930999897.png": {
+    "mtime": 1778930999.9018528,
+    "ast_hash": "d24bc90b81aca44a393c0cd0da66349a",
+    "semantic_hash": "d24bc90b81aca44a393c0cd0da66349a"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\images\\menu\\media__1778929707647.png": {
+    "mtime": 1778929752.85703,
+    "ast_hash": "bbe31da195c17bfc2b7afd1cc048e61c",
+    "semantic_hash": "bbe31da195c17bfc2b7afd1cc048e61c"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\images\\menu\\menu_card_detail_1778930178019.png": {
+    "mtime": 1778930178.0216508,
+    "ast_hash": "2775f16139a986c72b37fb25b82b12aa",
+    "semantic_hash": "2775f16139a986c72b37fb25b82b12aa"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\images\\menu\\menu_header_1778930178310.png": {
+    "mtime": 1778930178.3122787,
+    "ast_hash": "fc6a6bce2b2556688e527a965ae44eee",
+    "semantic_hash": "fc6a6bce2b2556688e527a965ae44eee"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\images\\menu\\menu_page_full_1778930176721.png": {
+    "mtime": 1778930176.7244976,
+    "ast_hash": "0cd979f087f854e6ae5f7201189bb473",
+    "semantic_hash": "0cd979f087f854e6ae5f7201189bb473"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\images\\menu\\menu_page_top_1778930131025.png": {
+    "mtime": 1778930131.0323367,
+    "ast_hash": "b50390c680b4bac9f8ea6ce90d1916c7",
+    "semantic_hash": "b50390c680b4bac9f8ea6ce90d1916c7"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\images\\menu\\menu_page_verification_1778932905445.png": {
+    "mtime": 1778932905.4475825,
+    "ast_hash": "6f20bef901a80aa692e967574fe8335b",
+    "semantic_hash": "6f20bef901a80aa692e967574fe8335b"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\public\\images\\menu\\pour_over_coffee_1778931811692.png": {
+    "mtime": 1778931811.6944935,
+    "ast_hash": "0550703c9014e1bf42eb0af042199e1f",
+    "semantic_hash": "0550703c9014e1bf42eb0af042199e1f"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\about_elite_touch_cafe\\screen.png": {
+    "mtime": 1778885115.8708966,
+    "ast_hash": "b5e708b913f0a39ebd73bfb8a8f6f0b5",
+    "semantic_hash": "b5e708b913f0a39ebd73bfb8a8f6f0b5"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\admin_login_elite_touch_cafe\\screen.png": {
+    "mtime": 1778885115.6954367,
+    "ast_hash": "cee2e20b608aaab2d94d533a2fab614e",
+    "semantic_hash": "cee2e20b608aaab2d94d533a2fab614e"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\cart_drawer_elite_touch_cafe\\screen.png": {
+    "mtime": 1778885115.7660909,
+    "ast_hash": "0ac47a0dee7ba8d1769df6589f5ec104",
+    "semantic_hash": "0ac47a0dee7ba8d1769df6589f5ec104"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\checkout_elite_touch_cafe\\screen.png": {
+    "mtime": 1778885115.7487738,
+    "ast_hash": "8987340a7d1eb5fa0202227dbee7b0c5",
+    "semantic_hash": "8987340a7d1eb5fa0202227dbee7b0c5"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\contact_elite_touch_cafe\\screen.png": {
+    "mtime": 1778885115.8018281,
+    "ast_hash": "7bb146c665ddec03a3618303787c2b61",
+    "semantic_hash": "7bb146c665ddec03a3618303787c2b61"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\dashboard_elite_touch_cafe_admin\\screen.png": {
+    "mtime": 1778885115.7102435,
+    "ast_hash": "72d300c18891aa91b2a55feb750f9926",
+    "semantic_hash": "72d300c18891aa91b2a55feb750f9926"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\gallery_manager_elite_touch_cafe_admin\\screen.png": {
+    "mtime": 1778885115.837921,
+    "ast_hash": "9417afdc17bd80f9f9330dffc3d12086",
+    "semantic_hash": "9417afdc17bd80f9f9330dffc3d12086"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\hero_editor_elite_touch_cafe_admin\\screen.png": {
+    "mtime": 1778885115.9035344,
+    "ast_hash": "cd064905703560a4f6daf36e8a412600",
+    "semantic_hash": "cd064905703560a4f6daf36e8a412600"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\home_with_coffee_background_elite_touch_cafe\\screen.png": {
+    "mtime": 1778885115.817719,
+    "ast_hash": "8516300a5888d14d0e8093caabb53d1e",
+    "semantic_hash": "8516300a5888d14d0e8093caabb53d1e"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\info_hours_elite_touch_cafe_admin\\screen.png": {
+    "mtime": 1778885115.9249215,
+    "ast_hash": "cc4f03a9002f7029c6ad7a949c59e0b6",
+    "semantic_hash": "cc4f03a9002f7029c6ad7a949c59e0b6"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\menu_elite_touch_cafe\\screen.png": {
+    "mtime": 1778885115.730201,
+    "ast_hash": "28428c3448cb927bf01e5044d19c095d",
+    "semantic_hash": "28428c3448cb927bf01e5044d19c095d"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\menu_manager_elite_touch_cafe_admin\\screen.png": {
+    "mtime": 1778885115.7799356,
+    "ast_hash": "fb6b6dc423c3da549f58488dae5bc658",
+    "semantic_hash": "fb6b6dc423c3da549f58488dae5bc658"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\menu_with_cart_elite_touch_cafe\\screen.png": {
+    "mtime": 1778885115.855542,
+    "ast_hash": "1e8dbf5e842392530e0c13c170349aa2",
+    "semantic_hash": "1e8dbf5e842392530e0c13c170349aa2"
+  },
+  "C:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website\\_stitch_components\\order_confirmed_elite_touch_cafe\\screen.png": {
+    "mtime": 1778885115.8849406,
+    "ast_hash": "3d53a3b17d068614a59b7f133bbd3fd9",
+    "semantic_hash": "3d53a3b17d068614a59b7f133bbd3fd9"
+  }
+}

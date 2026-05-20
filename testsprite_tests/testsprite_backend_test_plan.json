@@ -1,0 +1,52 @@
+[
+  {
+    "id": "TC001",
+    "title": "get menu items without authentication",
+    "description": "Verify that a GET request to /api/menu without authentication returns a 200 status code with an array of menu items, including the case when the database is empty returning an empty array."
+  },
+  {
+    "id": "TC002",
+    "title": "post menu item with authentication",
+    "description": "Verify that a POST request to /api/menu with valid authenticated request body creates a new menu item, returns a 201 status code, and includes the created item's ID. Also verify 400/422 for missing required fields and 413 for oversized payloads."
+  },
+  {
+    "id": "TC003",
+    "title": "put menu item with authentication",
+    "description": "Verify that a PUT request to /api/menu with valid authenticated update payload updates the menu item and returns a 200 status code with the updated item. Also verify 400/422 for invalid data and 401 for invalid or expired tokens."
+  },
+  {
+    "id": "TC004",
+    "title": "delete menu item with authentication",
+    "description": "Verify that a DELETE request to /api/menu with valid authenticated identifier deletes the menu item and returns 200 or 204 status code. Also verify 401 for missing or invalid tokens and 409 for duplicate unique field conflicts."
+  },
+  {
+    "id": "TC005",
+    "title": "get gallery images without authentication",
+    "description": "Verify that a GET request to /api/gallery without authentication returns a 200 status code with an array of gallery images."
+  },
+  {
+    "id": "TC006",
+    "title": "post gallery image with authentication",
+    "description": "Verify that a POST request to /api/gallery with valid authenticated image metadata creates a new gallery image, returns 201 with the created image including its ID, and sanitizes inputs to prevent XSS and SQL injection. Also verify 400/422 for missing required fields."
+  },
+  {
+    "id": "TC007",
+    "title": "put gallery image with authentication",
+    "description": "Verify that a PUT request to /api/gallery with valid authenticated update payload updates the gallery image and returns 200 with the updated image. Also verify 401 for invalid tokens."
+  },
+  {
+    "id": "TC008",
+    "title": "delete gallery image with authentication",
+    "description": "Verify that a DELETE request to /api/gallery with valid authenticated identifier deletes the gallery image and returns 200 or 204. Verify 404 for malformed or invalid IDs."
+  },
+  {
+    "id": "TC009",
+    "title": "get hero config without authentication",
+    "description": "Verify that a GET request to /api/config/hero without authentication returns 200 with the current hero configuration."
+  },
+  {
+    "id": "TC010",
+    "title": "put hero config with authentication",
+    "description": "Verify that a PUT request to /api/config/hero with valid authenticated configuration changes updates the hero config and returns 200 with the updated config. Also verify 400/422 for missing or invalid fields, including invalid date values, and 401 for missing or invalid tokens."
+  }
+]

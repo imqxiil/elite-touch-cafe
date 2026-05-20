@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elite Touch Cafe - Gallery Manager</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&amp;family=EB+Garamond:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#364486",
+                      "primary-fixed-dim": "#bdc2ff",
+                      "surface-container-highest": "#e4e1ea",
+                      "surface-tint": "#4c56af",
+                      "surface": "#fbf8ff",
+                      "secondary-container": "#a7b5fe",
+                      "inverse-surface": "#303036",
+                      "surface-bright": "#fbf8ff",
+                      "on-secondary-fixed": "#001257",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed-dim": "#b9c3ff",
+                      "on-tertiary-fixed-variant": "#7b2e12",
+                      "secondary-fixed": "#dde1ff",
+                      "surface-container-high": "#eae7ef",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#390c00",
+                      "tertiary-fixed": "#ffdbd0",
+                      "on-error": "#ffffff",
+                      "secondary": "#4c5a9d",
+                      "surface-container-low": "#f5f2fb",
+                      "primary": "#000666",
+                      "surface-container": "#efecf5",
+                      "on-secondary-fixed-variant": "#344283",
+                      "on-primary-container": "#8690ee",
+                      "inverse-primary": "#bdc2ff",
+                      "on-primary-fixed-variant": "#343d96",
+                      "tertiary-container": "#5c1800",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#000767",
+                      "outline-variant": "#c6c5d4",
+                      "tertiary": "#380b00",
+                      "on-error-container": "#93000a",
+                      "outline": "#767683",
+                      "primary-fixed": "#e0e0ff",
+                      "on-tertiary-container": "#e17c5a",
+                      "on-surface-variant": "#454652",
+                      "on-background": "#1b1b21",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "background": "#fbf8ff",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-container": "#1a237e",
+                      "on-surface": "#1b1b21",
+                      "tertiary-fixed-dim": "#ffb59d",
+                      "surface-variant": "#e4e1ea",
+                      "surface-dim": "#dbd9e1",
+                      "inverse-on-surface": "#f2eff8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "8px",
+                      "gutter": "24px",
+                      "xs": "4px",
+                      "xxl": "80px",
+                      "lg": "24px",
+                      "xl": "48px",
+                      "unit": "4px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "md": "16px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "DM Sans"
+                      ],
+                      "headline-md": [
+                              "EB Garamond"
+                      ],
+                      "display-lg-mobile": [
+                              "EB Garamond"
+                      ],
+                      "headline-sm": [
+                              "EB Garamond"
+                      ],
+                      "display-lg": [
+                              "EB Garamond"
+                      ],
+                      "body-md": [
+                              "DM Sans"
+                      ],
+                      "label-sm": [
+                              "DM Sans"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-xl docked full-width top-0 border-b-[0.5px] border-outline-variant dark:border-outline flat no shadows flex justify-between items-center w-full px-margin-desktop py-sm ml-64 fixed z-50 h-16">
+<div class="flex items-center gap-md">
+<span class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed">Elite Touch Cafe</span>
+</div>
+<div class="flex items-center gap-lg">
+<div class="flex items-center gap-md">
+<button class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<div class="flex items-center gap-sm">
+<img alt="Admin User" class="w-8 h-8 rounded-full object-cover" data-alt="A close up portrait of a professional man in a tailored suit, looking confident. He is indoors with soft, flattering lighting typical of a high-end office environment. The color palette is composed of rich, sophisticated tones with deep blues and crisp whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZzGFg89-gJwNYaV2UlA5rwjieEcdCJvbrjciuehhkcmclFi_WL8V-Fe93pZhlIznLmNLGMe649dI_YgWq3tDqvRpGInf8maKukgg2NrJTn3UCn5HghzHtLyII4-h2yxk_ODNT5ti2Lzq7uVgUl_-EnxAW4BZR5lX16QJ4zQPzybPckyBdBXOKxb3XS-hPcYkWzCzu4Zom9AvcSoFOe3JvzhN1_H30WCtsIWpp6Il0ZwzolM5K-EKD7qA3xWbr4uUnEwrJzoKZzKGm"/>
+<button class="text-primary dark:text-primary-fixed font-label-sm text-label-sm px-4 py-2 hover:bg-surface-container-low transition-colors duration-200 rounded-DEFAULT">Logout</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="bg-surface dark:bg-inverse-surface fixed left-0 top-0 h-full w-64 border-r-[0.5px] border-outline-variant dark:border-outline flat no shadows flex flex-col h-full py-lg px-md z-40">
+<div class="mb-xl px-sm">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container flex items-center justify-center rounded-lg mb-sm">
+<span class="font-headline-md text-headline-md">Et</span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed">Elite Touch Cafe</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Admin Dashboard</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-md px-sm py-md rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-sm py-md rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-label-sm text-label-sm">Menu</span>
+</a>
+<a class="flex items-center gap-md px-sm py-md rounded-lg text-primary dark:text-primary-fixed-dim font-bold border-r-2 border-primary dark:border-primary-fixed-dim bg-surface-container-low" href="#">
+<span class="material-symbols-outlined" data-icon="collections">collections</span>
+<span class="font-label-sm text-label-sm">Gallery</span>
+</a>
+<a class="flex items-center gap-md px-sm py-md rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="image_aspect_ratio">image_aspect_ratio</span>
+<span class="font-label-sm text-label-sm">Hero Banner</span>
+</a>
+<a class="flex items-center gap-md px-sm py-md rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span class="font-label-sm text-label-sm">Info &amp; Hours</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="w-full py-3 px-6 bg-transparent border border-primary text-primary font-label-sm text-label-sm rounded-DEFAULT hover:bg-surface-container-low transition-colors duration-200">View Live Site</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-64 pt-24 px-margin-desktop pb-xxl min-h-screen flex flex-col">
+<!-- Header -->
+<div class="flex justify-between items-end mb-xl">
+<div>
+<h2 class="font-display-lg text-display-lg text-primary mb-sm">Gallery</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Manage the images displayed in your public gallery.</p>
+</div>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm py-3 px-8 rounded-DEFAULT hover:bg-on-secondary-fixed transition-colors duration-200 flex items-center gap-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="upload">upload</span>
+                Upload Images
+            </button>
+</div>
+<!-- Upload Area -->
+<div class="border-2 border-dashed border-outline-variant bg-surface-container-lowest rounded-xl p-xl flex flex-col items-center justify-center text-center mb-xl hover:bg-surface-container-low transition-colors duration-200 cursor-pointer">
+<div class="w-16 h-16 bg-surface-container flex items-center justify-center rounded-full mb-md text-primary">
+<span class="material-symbols-outlined text-[32px]" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-background mb-xs">Drag and drop your images here</p>
+<p class="font-body-md text-body-md text-on-surface-variant">or click to browse from your computer. Max file size: 5MB.</p>
+</div>
+<!-- Gallery Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mb-lg">
+<!-- Image Card 1 -->
+<div class="relative group rounded-lg overflow-hidden border border-surface-variant aspect-square bg-surface-container-lowest">
+<img alt="Restaurant Interior" class="w-full h-full object-cover" data-alt="A beautifully lit, high-end restaurant interior viewed from a low angle. The scene features minimalist, elegant furniture with clean lines. Soft, warm ambient light casts delicate shadows across pristine white tablecloths. The overall mood is sophisticated, quiet luxury, with a color palette dominated by whites, warm greys, and deep navy accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArc2SFXE7s-vik36p_AXvwg_3tXd8_MvcgDk0_cbZUzh5hlUKWKdN-3V-XcUX9wmOCTEFXrQRJCT_PEXQzz767EhgZ0EEwIjZmCcNfYbPz_x44lLqR6EAXuDFgKcaeaFyrtKl_bbth-EBdSViblFiUqf1W-QzBQrUP1jBU7QDQqTENqN6wOimomFuxonMRx0_q2HF_Rro0UzS_roT610x0lPTMG9F-Rg2jRm-frKfKF3pTP1EcCAwSObiT-bXlODH5fO1quxHmGfbc"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="w-12 h-12 bg-error text-on-error rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-200 shadow-lg">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Image Card 2 -->
+<div class="relative group rounded-lg overflow-hidden border border-surface-variant aspect-square bg-surface-container-lowest">
+<img alt="Gourmet Dish" class="w-full h-full object-cover" data-alt="A close-up, editorial-style photograph of a beautifully plated gourmet dish. The food is arranged with minimalist precision on a matte white ceramic plate. The lighting is soft and directional, highlighting the textures of the fresh ingredients. The background is slightly out of focus, maintaining a pristine, airy aesthetic typical of fine dining photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1SLDkdppUiZxtjMqvdWKvEopjg8cVwAVCkPTYRZG-EiALDz-6973K28bfS84j25KHIl8J0HCIIC0CYai83LskgvZBIBlz-20JseNQ9w63Dr9-dzJlMrcD2PMMOhvKmCkAzlaGxEo67FqR4EEIthL9uQ1ayDNQNPiQ5jNQ2oeHju3-y2rZWlg3fiwJda2Bm4Pv_GCNNZA8E1FHvmzNMLZ381INraV4DxTfDRMaPc6YlP3PzNVf8zCede2ROlXpljzEFxv7h6nBf_V4"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="w-12 h-12 bg-error text-on-error rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-200 shadow-lg">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Image Card 3 -->
+<div class="relative group rounded-lg overflow-hidden border border-surface-variant aspect-square bg-surface-container-lowest">
+<img alt="Cocktail" class="w-full h-full object-cover" data-alt="An elegant, handcrafted cocktail in a delicate crystal glass, sitting on a polished dark marble surface. Condensation softly beads on the outside of the glass. The background is a blurred, sophisticated bar setting with subtle warm lighting. The image conveys a sense of premium quality, refinement, and relaxed luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcj8b5l3yCepXRI910orpkujivvCU6eEN39w1NFFl3t9oeCIe_aPVKO57zV4BFN8HvNGE9-URXIoeH5jsNNV72o9M8lKq3UNNBvCgRVdWZszij2qdNIyJZFQGImFGCY-yNs-b1X_lHktdVtXPAewWEOfDePRU5GfYcXACg_nJMWjSqVmDXEaYum5W74o0vu9-vIUnNJOyp4y8YRa2Jgay25iBmWN6AsXik2oz5I_uGAAswyzYlHVLt9-VJdSwD-OHNni85wteZpU_I"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="w-12 h-12 bg-error text-on-error rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-200 shadow-lg">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Image Card 4 -->
+<div class="relative group rounded-lg overflow-hidden border border-surface-variant aspect-square bg-surface-container-lowest">
+<img alt="Dining Area" class="w-full h-full object-cover" data-alt="A wide shot of a serene, minimalist dining area during the daytime. Large windows let in abundant natural light, creating an airy and spacious atmosphere. The tables are set with precise, minimalist tableware. The color palette relies on clean whites, light woods, and small, deep blue accents, exuding quiet elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdAnxqqU-vYuDc0p5h7m9gRPy2S5hQExxuOQw85SA2M_83yGVsBFtFj47S-cqyKDv-vKNgSckfbP6b9gQDe7T-C0AJfttJbCM3vpVOKDnZzHe6dEds494pbbEiREUUuUI3A_WiWvbumtSPXiD01eygWUGYhTv9wv4HsQmYQv-lOhR6l_O1OMiQ2XU5SfcsR-DhureFIoJ9_xD8KFcCh-Umekjvr7ml72uG6HN3jyLBbBIEK-wgw8KeFLIJ_T7EuiW-m9AehStEjiol"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="w-12 h-12 bg-error text-on-error rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-200 shadow-lg">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Image Card 5 -->
+<div class="relative group rounded-lg overflow-hidden border border-surface-variant aspect-square bg-surface-container-lowest">
+<img alt="Steak Dish" class="w-full h-full object-cover" data-alt="A perfectly cooked, high-end steak dish presented on a minimalist dark ceramic plate. The lighting emphasizes the rich, savory textures of the meat and the delicate microgreens used for garnish. The surrounding space is dark and moody, focusing entirely on the culinary creation. The aesthetic is modern, refined, and deeply appetizing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADjqHGGNPsvfZVSuDVQa6d_kyh_yuArTHob0la3xBuGPLhCiIVaoOwW3_LxFNNvRaQm4vmSuuS_OSoHdwDBGQFX3sqZmd-UUbFmfMcd1p4UmkZvmyfiIyIYwbCreaXzGt7ovqETsuheDWokTwIJlfm_E52tbL0YIw17qGvTgJJoGo9No051mQ1cHj-7oo1HYpPiKN6eEx6DpjYRxWdpzRuBvXOMnnIyT0MxPA9vFxZrC9WAmMYCViH_0lT1Va0RR8f2p_vvJH1vegU"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="w-12 h-12 bg-error text-on-error rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-200 shadow-lg">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Image Card 6 -->
+<div class="relative group rounded-lg overflow-hidden border border-surface-variant aspect-square bg-surface-container-lowest">
+<img alt="Wine Pour" class="w-full h-full object-cover" data-alt="A dynamic yet elegant shot of red wine being poured into a fine crystal glass. The fluid motion is captured sharply against a softly blurred, sophisticated restaurant background. The lighting catches the deep ruby tones of the wine. The image communicates luxury, celebration, and refined taste." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARcZxQh1W8lp9zBCL4-iQinvh8xKrfEgGSW72tUJttHxv5ZmREWULopaQXrWI12fgikvz7Y6-1bY-ctkk6G1T7wPs1B0A7hyK_EaB-yBamEGUXAbssNKvn12SSjzqiminsY2IG_1js78eviovDTlh74x1RUlzvuEXBp5NnOGOj6-PTwqlj5VpJkRTo5Yvzi3szH2qSgTAygGM7-ltXzhgM_wd4hDnu3dr2RITAoafYnObvyrw4uxm7PDJBxV3Op1uW6sS2TIeBjdVH"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="w-12 h-12 bg-error text-on-error rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-200 shadow-lg">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Footer Info -->
+<div class="mt-auto pt-lg border-t border-surface-variant flex justify-between items-center text-on-surface-variant font-body-md">
+<span>Showing 6 of 24 images</span>
+<div class="flex gap-sm">
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-[18px]" data-icon="chevron_left">chevron_left</span></button>
+<button class="w-8 h-8 rounded bg-primary text-on-primary flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center hover:bg-surface-container-low transition-colors">2</button>
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center hover:bg-surface-container-low transition-colors">3</button>
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-[18px]" data-icon="chevron_right">chevron_right</span></button>
+</div>
+</div>
+</main>
+</body></html>

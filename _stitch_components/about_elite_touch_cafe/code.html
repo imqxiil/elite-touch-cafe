@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Elite Touch Cafe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=EB+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed": "#e0e0ff",
+                      "secondary-fixed": "#dde1ff",
+                      "tertiary": "#380b00",
+                      "on-background": "#1b1b21",
+                      "surface": "#fbf8ff",
+                      "inverse-primary": "#bdc2ff",
+                      "secondary-container": "#a7b5fe",
+                      "outline-variant": "#c6c5d4",
+                      "surface-container-highest": "#e4e1ea",
+                      "on-secondary-fixed-variant": "#344283",
+                      "error": "#ba1a1a",
+                      "secondary": "#4c5a9d",
+                      "on-primary-fixed-variant": "#343d96",
+                      "tertiary-container": "#5c1800",
+                      "surface-bright": "#fbf8ff",
+                      "on-secondary-container": "#364486",
+                      "on-tertiary-fixed": "#390c00",
+                      "tertiary-fixed": "#ffdbd0",
+                      "surface-tint": "#4c56af",
+                      "background": "#fbf8ff",
+                      "inverse-on-surface": "#f2eff8",
+                      "inverse-surface": "#303036",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#b9c3ff",
+                      "on-primary-container": "#8690ee",
+                      "on-primary": "#ffffff",
+                      "outline": "#767683",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#001257",
+                      "on-tertiary-fixed-variant": "#7b2e12",
+                      "on-primary-fixed": "#000767",
+                      "on-tertiary-container": "#e17c5a",
+                      "surface-container-low": "#f5f2fb",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#454652",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#efecf5",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-variant": "#e4e1ea",
+                      "surface-container-high": "#eae7ef",
+                      "primary-fixed-dim": "#bdc2ff",
+                      "tertiary-fixed-dim": "#ffb59d",
+                      "primary-container": "#1a237e",
+                      "on-surface": "#1b1b21",
+                      "surface-dim": "#dbd9e1",
+                      "primary": "#000666"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "48px",
+                      "lg": "24px",
+                      "margin-desktop": "64px",
+                      "sm": "8px",
+                      "md": "16px",
+                      "xs": "4px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "xxl": "80px",
+                      "unit": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "DM Sans"
+                      ],
+                      "body-md": [
+                              "DM Sans"
+                      ],
+                      "headline-md": [
+                              "EB Garamond"
+                      ],
+                      "label-sm": [
+                              "DM Sans"
+                      ],
+                      "headline-sm": [
+                              "EB Garamond"
+                      ],
+                      "display-lg": [
+                              "EB Garamond"
+                      ],
+                      "display-lg-mobile": [
+                              "EB Garamond"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface dark:bg-surface docked full-width top-0 border-b border-outline-variant dark:border-outline flat no shadows z-50 relative">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-md max-w-7xl mx-auto">
+<!-- Brand Logo -->
+<a class="text-headline-sm font-headline-sm text-primary dark:text-primary-fixed-dim" href="#">
+                Elite Touch Cafe
+            </a>
+<!-- Desktop Navigation Links -->
+<div class="hidden md:flex items-center space-x-lg">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors py-2 px-3 rounded-DEFAULT" href="#">Menu</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 opacity-80 transition-all duration-300" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors py-2 px-3 rounded-DEFAULT" href="#">Locations</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors py-2 px-3 rounded-DEFAULT" href="#">Reservations</a>
+</div>
+<!-- Trailing Action -->
+<button class="hidden md:inline-flex bg-primary text-on-primary font-label-sm text-label-sm py-3 px-8 rounded-DEFAULT hover:opacity-90 transition-opacity">
+                Order Now
+            </button>
+<!-- Mobile Menu Toggle (Minimal) -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-xxl">
+<!-- Split Layout: Brand Story -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-xxl items-center mb-xxl">
+<!-- Left: Monogram/Image -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low border-[0.5px] border-primary flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-surface to-surface-container-highest opacity-50"></div>
+<!-- Large Decorative Monogram -->
+<span class="font-display-lg text-[120px] text-primary opacity-20 absolute z-0 select-none">Et</span>
+<img alt="Elegant coffee preparation" class="relative z-10 w-full h-full object-cover mix-blend-multiply opacity-90 p-lg" data-alt="A highly detailed, editorial-style photograph of a barista meticulously pouring a perfectly extracted espresso shot into a delicate, thin-rimmed ceramic cup. The setting is an upscale, minimalist cafe with soft, natural light filtering through sheer linen curtains, casting gentle shadows. The color palette is dominated by pristine whites, warm ivory, and deep espresso tones, accented with touches of polished brass equipment. The mood is tranquil, refined, and deeply focused on the artisanal craft of coffee making." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMy8-inJ7GWGSRIqfFFzi6PIO_QXGiA_OjycAS6wryIuP4hQLD7nXboLaKebLjhxHneNi37_gpkuSlE6oJXRYlVWVEP3XRcRIpkXcdElc7RJCtV8afOCW8-dGcgSEWqoVpBOLwkNg3Hw90BxLINkJhAdhUf77PmoVvJg9S5ONLq0pE4omi7efgJ54nGLwssWWJL39RhJL-ClIwpkXfXO40PhPSEBVU2gjkcOVPO_FX5-YeXTrvVe3fT6MrphAl3PjNf6mlSRnzFkCz"/>
+</div>
+<!-- Right: Brand Story Text -->
+<div class="flex flex-col space-y-lg">
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Our Heritage</p>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">
+                    A Symphony of <br/>Taste and Elegance
+                </h1>
+<div class="w-16 h-[1px] bg-primary my-md"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-prose">
+                    At Elite Touch Cafe, we believe that coffee is more than a beverage; it is a ritual. Founded on the principles of quiet luxury and meticulous craftsmanship, our spaces are designed to be sanctuaries from the bustling world. Every bean is curated, every pour intentional, and every moment crafted to elevate your daily routine into an extraordinary experience.
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-prose">
+                    We source exclusively from sustainable, high-altitude estates, roasting our beans in small batches to preserve their delicate profiles. Our culinary offerings mirror this dedication, presenting elegant pastries and savory bites that harmonize perfectly with our signature blends.
+                </p>
+<div class="pt-lg">
+<button class="border-[0.5px] border-primary bg-transparent text-primary font-label-sm text-label-sm py-3 px-8 rounded-DEFAULT hover:shadow-[0_4px_20px_-2px_rgba(0,6,102,0.15)] transition-all duration-300">
+                        Read Our Full Story
+                    </button>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="py-xxl">
+<div class="text-center mb-xl">
+<h2 class="font-headline-md text-headline-md text-primary">Our Core Pillars</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm">The foundation of our quiet luxury experience.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Value Block 1 -->
+<div class="bg-surface border-[0.5px] border-outline-variant p-xl flex flex-col items-center text-center hover:shadow-[0_4px_20px_-2px_rgba(0,6,102,0.1)] transition-shadow duration-300 group">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-lg group-hover:bg-primary-fixed transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="diamond">diamond</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Refined Quality</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Uncompromising standards in every ingredient, prioritizing clarity of flavor and exceptional provenance.
+                    </p>
+</div>
+<!-- Value Block 2 -->
+<div class="bg-surface border-[0.5px] border-outline-variant p-xl flex flex-col items-center text-center hover:shadow-[0_4px_20px_-2px_rgba(0,6,102,0.1)] transition-shadow duration-300 group">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-lg group-hover:bg-primary-fixed transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="spa">spa</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Mindful Craft</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Preparation elevated to an art form, performed with intention, precision, and a deep respect for the ritual.
+                    </p>
+</div>
+<!-- Value Block 3 -->
+<div class="bg-surface border-[0.5px] border-outline-variant p-xl flex flex-col items-center text-center hover:shadow-[0_4px_20px_-2px_rgba(0,6,102,0.1)] transition-shadow duration-300 group">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-lg group-hover:bg-primary-fixed transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="chair_alt">chair_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Sanctuary Spaces</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Architecturally considered environments designed to offer respite, comfort, and quiet elegance.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface full-width bottom-0 border-t border-outline-variant dark:border-outline flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-xxl gap-lg max-w-7xl mx-auto">
+<!-- Brand & Copyright -->
+<div class="flex flex-col items-center md:items-start gap-sm">
+<span class="text-headline-sm font-headline-sm text-primary dark:text-primary-fixed-dim">Elite Touch Cafe</span>
+<span class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant">
+                    © 2024 Elite Touch Cafe. All rights reserved.
+                </span>
+</div>
+<!-- Monogram Watermark -->
+<div class="hidden md:block">
+<span class="font-display-lg text-display-lg text-outline-variant opacity-30 select-none">Et</span>
+</div>
+<!-- Footer Links -->
+<div class="flex flex-wrap justify-center gap-md md:gap-lg">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<span class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant">Contact: 31011133</span>
+</div>
+</div>
+</footer>
+</body></html>

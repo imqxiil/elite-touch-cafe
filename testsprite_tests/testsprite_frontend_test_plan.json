@@ -1,0 +1,320 @@
+[
+  {
+    "id": "TC001",
+    "title": "Complete checkout from selected items",
+    "description": "This verifies that a customer can select items, continue to checkout, submit shipping and billing details, and reach order confirmation.",
+    "category": "Checkout",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /menu"
+      },
+      {
+        "type": "action",
+        "description": "Add a food item to the cart"
+      },
+      {
+        "type": "action",
+        "description": "Click the checkout action"
+      },
+      {
+        "type": "action",
+        "description": "Fill shipping details with valid information"
+      },
+      {
+        "type": "action",
+        "description": "Fill billing details with valid information"
+      },
+      {
+        "type": "action",
+        "description": "Submit the order"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the order confirmation page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an order confirmation is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Unauthenticated user is blocked from the admin dashboard",
+    "description": "This verifies that a user without admin authentication cannot access the protected admin dashboard.",
+    "category": "Admin Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /admin"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify access to the admin dashboard is blocked or redirected"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify admin panels are not displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Browse menu and add a food item to the cart",
+    "description": "This verifies that a customer can view the menu and add a food item to the cart successfully.",
+    "category": "Browse Menu",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /menu"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify menu items are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Add a food item to the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart reflects the added item"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Browse menu and add a drink item to the cart",
+    "description": "This verifies that a customer can view the menu and add a drink item to the cart successfully.",
+    "category": "Browse Menu",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /menu"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify menu items are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Add a drink item to the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart reflects the added item"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Authenticated admin can view the dashboard panels",
+    "description": "This verifies that an authenticated admin can access the admin area and review the dashboard panels successfully.",
+    "category": "Admin Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the login credentials with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the admin dashboard link"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify admin panels are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify site configuration controls are visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Authenticated admin can update site configuration",
+    "description": "This verifies that an authenticated admin can change site configuration and see the updated setting persist in the admin area.",
+    "category": "Admin Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the login credentials with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the admin dashboard link"
+      },
+      {
+        "type": "action",
+        "description": "Update a site configuration value"
+      },
+      {
+        "type": "action",
+        "description": "Save the configuration changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the updated configuration is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Homepage links customers into the ordering flow",
+    "description": "This verifies that a customer can start on the homepage, navigate to the menu, and proceed toward checkout.",
+    "category": "Browse Menu",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify homepage content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the menu link"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify menu items are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Add a menu item to the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart reflects the added item"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Checkout requires shipping and billing details",
+    "description": "This verifies that a customer cannot submit checkout without the required shipping and billing information and sees validation feedback.",
+    "category": "Checkout",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /checkout"
+      },
+      {
+        "type": "action",
+        "description": "Submit the order without filling required fields"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify validation errors are visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the order is not confirmed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC009",
+    "title": "Customer can browse supporting pages",
+    "description": "This verifies that a customer can open the supporting public pages and view their content without disrupting the ordering experience.",
+    "category": "Browse Menu",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /contact"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the contact page content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the locations page link"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the locations page content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the privacy policy link"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the privacy policy content is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the terms of service link"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the terms of service content is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC010",
+    "title": "Checkout prevents empty submission",
+    "description": "This verifies that an empty checkout state does not allow an order to be placed and shows guidance to add items first.",
+    "category": "Checkout",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /checkout"
+      },
+      {
+        "type": "action",
+        "description": "Submit the order without any selected items"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an empty cart or no-selection message is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the order is not confirmed"
+      }
+    ],
+    "priority": "Low"
+  }
+]

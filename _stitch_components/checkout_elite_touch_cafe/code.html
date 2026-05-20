@@ -1,0 +1,234 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Checkout - Elite Touch Cafe</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600&amp;family=EB+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#390c00",
+                        "surface": "#fbf8ff",
+                        "primary": "#000666",
+                        "secondary-fixed": "#dde1ff",
+                        "on-tertiary-fixed-variant": "#7b2e12",
+                        "outline": "#767683",
+                        "inverse-primary": "#bdc2ff",
+                        "on-tertiary-container": "#e17c5a",
+                        "surface-tint": "#4c56af",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "outline-variant": "#c6c5d4",
+                        "background": "#fbf8ff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f2eff8",
+                        "surface-variant": "#e4e1ea",
+                        "on-secondary-container": "#364486",
+                        "surface-dim": "#dbd9e1",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#303036",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffdbd0",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#e0e0ff",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#efecf5",
+                        "on-primary-fixed": "#000767",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#5c1800",
+                        "secondary": "#4c5a9d",
+                        "primary-container": "#1a237e",
+                        "on-secondary-fixed-variant": "#344283",
+                        "surface-container-high": "#eae7ef",
+                        "surface-container-low": "#f5f2fb",
+                        "secondary-container": "#a7b5fe",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e4e1ea",
+                        "on-surface-variant": "#454652",
+                        "on-primary-container": "#8690ee",
+                        "secondary-fixed-dim": "#b9c3ff",
+                        "on-background": "#1b1b21",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#380b00",
+                        "on-secondary-fixed": "#001257",
+                        "on-surface": "#1b1b21",
+                        "on-primary-fixed-variant": "#343d96",
+                        "surface-bright": "#fbf8ff",
+                        "tertiary-fixed-dim": "#ffb59d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "md": "16px",
+                        "xl": "48px",
+                        "unit": "4px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "xxl": "80px",
+                        "lg": "24px",
+                        "margin-desktop": "64px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["DM Sans"],
+                        "headline-sm": ["EB Garamond"],
+                        "headline-md": ["EB Garamond"],
+                        "display-lg-mobile": ["EB Garamond"],
+                        "body-lg": ["DM Sans"],
+                        "display-lg": ["EB Garamond"],
+                        "body-md": ["DM Sans"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .dotted-leader {
+            border-bottom: 2px dotted theme('colors.outline-variant');
+            flex-grow: 1;
+            margin: 0 theme('spacing.sm');
+            position: relative;
+            top: -6px;
+        }
+    </style>
+<style data-stitch-cursor=""></style><style data-stitch-scroll-lock=""></style></head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopNavBar: Suppressed per intent rules (Checkout is transactional) -->
+<main class="flex-grow max-w-[1280px] w-full mx-auto px-margin-mobile md:px-margin-desktop py-xxl">
+<div class="mb-xl text-center md:text-left">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-sm tracking-tight">Checkout</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Complete your order details below.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Your Details Form -->
+<div class="lg:col-span-7 flex flex-col gap-xl">
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-lg border-b border-outline-variant pb-sm">Your Details</h2>
+<form class="flex flex-col gap-lg">
+<!-- Order Type Toggle -->
+<div class="flex flex-col gap-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Order Type</span>
+<div class="flex flex-wrap gap-sm">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="order_type" type="radio" value="dine_in">
+<div class="px-xl py-[12px] rounded-full border border-primary text-primary peer-checked:bg-primary peer-checked:text-on-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest">
+                                        Dine In
+                                    </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="order_type" type="radio" value="takeaway">
+<div class="px-xl py-[12px] rounded-full border border-primary text-primary peer-checked:bg-primary peer-checked:text-on-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest hover:bg-surface-variant">
+                                        Takeaway
+                                    </div>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="flex flex-col gap-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest" for="full_name">Full Name</label>
+<input class="border-0 border-b border-outline-variant bg-transparent px-0 py-sm focus:ring-0 focus:border-primary font-body-md text-body-md text-on-surface transition-colors placeholder:text-outline" id="full_name" placeholder="John Doe" type="text">
+</div>
+<div class="flex flex-col gap-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest" for="phone">Phone Number</label>
+<input class="border-0 border-b border-outline-variant bg-transparent px-0 py-sm focus:ring-0 focus:border-primary font-body-md text-body-md text-on-surface transition-colors placeholder:text-outline" id="phone" placeholder="+1 (555) 000-0000" type="tel">
+</div>
+</div>
+
+<div class="flex flex-col gap-sm">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest" for="notes">Special Notes</label>
+<textarea class="border border-outline-variant rounded-DEFAULT bg-transparent p-sm focus:ring-1 focus:ring-primary focus:border-primary font-body-md text-body-md text-on-surface transition-colors placeholder:text-outline resize-none" id="notes" placeholder="Any dietary requirements or special requests..." rows="3"></textarea>
+</div>
+</form>
+</section>
+</div>
+<!-- Right Column: Order Summary -->
+<div class="lg:col-span-5">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-lg md:p-xl sticky top-xl">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-lg">Order Summary</h2>
+<div class="flex flex-col gap-md mb-xl">
+<!-- Item 1 -->
+<div class="flex items-baseline font-body-md text-body-md">
+<span class="text-on-surface">Artisan Truffle Burger</span>
+<div class="dotted-leader"></div>
+<span class="text-on-surface font-medium">$24.00</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-[-8px]">Medium Rare, No Onions</div>
+<!-- Item 2 -->
+<div class="flex items-baseline font-body-md text-body-md">
+<span class="text-on-surface">Truffle Parmesan Fries</span>
+<div class="dotted-leader"></div>
+<span class="text-on-surface font-medium">$12.00</span>
+</div>
+<!-- Item 3 -->
+<div class="flex items-baseline font-body-md text-body-md">
+<span class="text-on-surface">Hand-Poured Cortado</span>
+<div class="dotted-leader"></div>
+<span class="text-on-surface font-medium">$6.50</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-[-8px]">Oat Milk</div>
+</div>
+<div class="border-t border-outline-variant pt-md flex flex-col gap-sm mb-xl font-body-md text-body-md">
+<div class="flex justify-between text-on-surface-variant">
+<span class="">Subtotal</span>
+<span class="">$42.50</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="">Tax (8%)</span>
+<span class="">$3.40</span>
+</div>
+<div class="flex justify-between font-headline-sm text-headline-sm text-primary mt-sm pt-sm border-t border-outline-variant">
+<span class="">Total</span>
+<span class="">$45.90</span>
+</div>
+</div>
+<button class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-[16px] px-xl rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-widest flex items-center justify-center gap-sm transition-all duration-300 shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+                        Send Your Order via WhatsApp
+                    </button>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center mt-md">
+                        Payment will be collected at the table or counter.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest w-full pt-xxl pb-xl border-t border-outline-variant dark:border-outline mt-auto">
+<div class="max-w-[1280px] mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim opacity-50">
+                Elite Touch Cafe
+            </div>
+<nav class="flex flex-wrap justify-center gap-md font-label-sm text-label-sm">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors underline-offset-4 hover:underline" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors underline-offset-4 hover:underline" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors underline-offset-4 hover:underline" href="#">Contact</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors underline-offset-4 hover:underline" href="#">Careers</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">
+                © 2024 Elite Touch Cafe. Designed for intentionality.
+            </div>
+</div>
+</footer>
+
+
+</body></html>

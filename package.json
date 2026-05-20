@@ -1,0 +1,30 @@
+{
+  "name": "temp_app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:https": "local-ssl-proxy --source 3443 --target 3000 --key 192.168.18.22+2-key.pem --cert 192.168.18.22+2.pem",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.10.3",
+    "@supabase/supabase-js": "^2.106.0",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "local-ssl-proxy": "^2.0.5",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

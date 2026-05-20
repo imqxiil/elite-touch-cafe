@@ -1,0 +1,76 @@
+version: "2"
+type: backend
+tech_stack:
+  - TypeScript
+  - Next.js
+  - Supabase
+features:
+  - name: Menu API
+    description: CRUD operations for menu items
+    files:
+      - src/app/api/menu/route.ts
+    endpoints:
+      - method: GET
+        path: /api/menu
+        description: List all menu items
+        auth_required: false
+      - method: POST
+        path: /api/menu
+        description: Create menu item
+        auth_required: true
+      - method: PUT
+        path: /api/menu
+        description: Update menu item
+        auth_required: true
+      - method: DELETE
+        path: /api/menu
+        description: Delete menu item
+        auth_required: true
+  - name: Gallery API
+    description: CRUD operations for gallery images
+    files:
+      - src/app/api/gallery/route.ts
+    endpoints:
+      - method: GET
+        path: /api/gallery
+        description: List all gallery images
+        auth_required: false
+      - method: POST
+        path: /api/gallery
+        description: Create gallery image
+        auth_required: true
+      - method: PUT
+        path: /api/gallery
+        description: Update gallery image
+        auth_required: true
+      - method: DELETE
+        path: /api/gallery
+        description: Delete gallery image
+        auth_required: true
+  - name: Config Hero API
+    description: Operations for hero config
+    files:
+      - src/app/api/config/hero/route.ts
+    endpoints:
+      - method: GET
+        path: /api/config/hero
+        description: Get hero config
+        auth_required: false
+      - method: PUT
+        path: /api/config/hero
+        description: Update hero config
+        auth_required: true
+  - name: Config Info API
+    description: Operations for info config
+    files:
+      - src/app/api/config/info/route.ts
+    endpoints:
+      - method: GET
+        path: /api/config/info
+        description: Get info config
+        auth_required: false
+      - method: PUT
+        path: /api/config/info
+        description: Update info config
+        auth_required: true
+known_limitations: []

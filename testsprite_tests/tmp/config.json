@@ -1,0 +1,18 @@
+{
+  "status": "commited",
+  "type": "backend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "backendAuthType": "public",
+  "executionArgs": {
+    "projectName": "stitch_elite_touch_cafe_website",
+    "projectPath": "c:\\Users\\naah2\\.gemini\\antigravity\\scratch\\stitch_elite_touch_cafe_website",
+    "testIds": [],
+    "additionalInstruction": "Focus on: API endpoints, data validation, auth & authorization, database integrity, performance, and edge cases.",
+    "serverMode": "development",
+    "envs": {
+      "API_KEY": "sk-user-FbVFT4PaaRzJFsrqzSg4KPEXu_Vo48lJtIOp_WtdvWcVkEyVYmP3-CqwTnaSlQN5306pOxASPOk9nIpB9RuKStBqJfyK4pKWml4CqbHtYQkFGDJxDoWW0uKZZZF8tL9-v9A"
+    }
+  },
+  "serverPort": 65380
+}
