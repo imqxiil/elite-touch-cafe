@@ -5,17 +5,34 @@ import { useGallery } from "@/context/GalleryContext";
 import { addAdminNotification } from "@/utils/notifications";
 
 export default function GalleryManager() {
-  const { images, addImage, deleteImage } = useGallery();
+  const { images, addImage, uploadImageFile, deleteImage } = useGallery();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newImage, setNewImage] = useState({ src: "", alt: "" });
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isUploading, setIsUploading] = useState(false);
 
-  const handleAddImage = (e: React.FormEvent) => {
+  const handleAddImage = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (newImage.src && newImage.alt) {
-      addImage(newImage.src, newImage.alt);
-      addAdminNotification("Gallery Updated", `Added new image "${newImage.alt}" to gallery`);
+    if (!newImage.alt) return;
+    if (!newImage.src && !selectedFile) return;
+
+    setIsUploading(true);
+    try {
+      if (selectedFile) {
+        await uploadImageFile(selectedFile, newImage.alt);
+        addAdminNotification("Gallery Updated", `Uploaded new image "${newImage.alt}" to gallery`);
+      } else if (newImage.src) {
+        await addImage(newImage.src, newImage.alt);
+        addAdminNotification("Gallery Updated", `Added new image "${newImage.alt}" to gallery`);
+      }
       setNewImage({ src: "", alt: "" });
+      setSelectedFile(null);
       setIsModalOpen(false);
+    } catch (err) {
+      console.error(err);
+      addAdminNotification("Upload Failed", "Failed to add image. Check console for details.");
+    } finally {
+      setIsUploading(false);
     }
   };
 
@@ -74,25 +91,58 @@ export default function GalleryManager() {
       {/* Add Image Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-primary/20 backdrop-blur-sm z-[200] flex items-center justify-center p-4">
-          <div className="bg-white w-[400px] max-w-[95vw] rounded-xl shadow-2xl border border-outline-variant overflow-hidden relative">
+          <div className="bg-white w-[500px] max-w-[95vw] rounded-xl shadow-2xl border border-outline-variant overflow-hidden relative">
             <header className="px-6 py-4 border-b border-outline-variant flex justify-between items-center bg-white">
               <h3 className="text-headline-sm text-primary font-medium">Add Gallery Image</h3>
-              <button onClick={() => setIsModalOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors">
+              <button 
+                onClick={() => setIsModalOpen(false)} 
+                className="text-on-surface-variant hover:text-primary transition-colors disabled:opacity-50"
+                disabled={isUploading}
+              >
                 <span className="material-symbols-outlined">close</span>
               </button>
             </header>
 
             <form onSubmit={handleAddImage} className="p-6 space-y-6">
-              <div className="space-y-2">
-                <label className="text-label-sm text-on-surface-variant uppercase tracking-widest">Image URL</label>
-                <input 
-                  required
-                  type="text" 
-                  placeholder="https://images.unsplash.com/..."
-                  className="w-full px-4 py-3 bg-white border border-outline-variant rounded focus:border-primary outline-none transition-all text-body-md"
-                  value={newImage.src}
-                  onChange={(e) => setNewImage({...newImage, src: e.target.value})}
-                />
+              
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <label className="text-label-sm text-on-surface-variant uppercase tracking-widest">Upload Local File</label>
+                  <input 
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+                      if (file) {
+                        setSelectedFile(file);
+                        setNewImage({...newImage, src: URL.createObjectURL(file)});
+                      }
+                    }}
+                    disabled={isUploading}
+                    className="w-full px-4 py-3 bg-white border border-outline-variant rounded focus:border-primary outline-none transition-all text-body-md file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20 disabled:opacity-50"
+                  />
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="h-px bg-outline-variant flex-1"></div>
+                  <span className="text-xs text-on-surface-variant uppercase tracking-widest">OR</span>
+                  <div className="h-px bg-outline-variant flex-1"></div>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-label-sm text-on-surface-variant uppercase tracking-widest">Image URL</label>
+                  <input 
+                    type="text" 
+                    placeholder="https://images.unsplash.com/..."
+                    className="w-full px-4 py-3 bg-white border border-outline-variant rounded focus:border-primary outline-none transition-all text-body-md disabled:opacity-50 disabled:bg-gray-50"
+                    value={selectedFile ? "" : newImage.src}
+                    disabled={!!selectedFile || isUploading}
+                    onChange={(e) => {
+                      setSelectedFile(null);
+                      setNewImage({...newImage, src: e.target.value});
+                    }}
+                  />
+                </div>
               </div>
 
               <div className="space-y-2">
@@ -101,8 +151,9 @@ export default function GalleryManager() {
                   required
                   type="text" 
                   placeholder="e.g. Signature Coffee"
-                  className="w-full px-4 py-3 bg-white border border-outline-variant rounded focus:border-primary outline-none transition-all text-body-md"
+                  className="w-full px-4 py-3 bg-white border border-outline-variant rounded focus:border-primary outline-none transition-all text-body-md disabled:opacity-50"
                   value={newImage.alt}
+                  disabled={isUploading}
                   onChange={(e) => setNewImage({...newImage, alt: e.target.value})}
                 />
               </div>
@@ -119,16 +170,29 @@ export default function GalleryManager() {
               <div className="pt-4 flex gap-4">
                 <button 
                   type="button" 
-                  onClick={() => setIsModalOpen(false)}
-                  className="flex-1 py-3 border border-outline-variant text-on-surface-variant text-label-sm rounded uppercase tracking-widest hover:bg-gray-50 transition-all"
+                  disabled={isUploading}
+                  onClick={() => {
+                    setNewImage({ src: "", alt: "" });
+                    setSelectedFile(null);
+                    setIsModalOpen(false);
+                  }}
+                  className="flex-1 py-3 border border-outline-variant text-on-surface-variant text-label-sm rounded uppercase tracking-widest hover:bg-gray-50 transition-all disabled:opacity-50"
                 >
                   Cancel
                 </button>
                 <button 
                   type="submit" 
-                  className="flex-1 py-3 bg-primary text-on-primary text-label-sm rounded uppercase tracking-widest hover:opacity-90 transition-all shadow-lg"
+                  disabled={isUploading || (!newImage.src && !selectedFile)}
+                  className="flex-1 py-3 bg-primary text-on-primary text-label-sm rounded uppercase tracking-widest hover:opacity-90 transition-all shadow-lg disabled:opacity-50 flex items-center justify-center gap-2"
                 >
-                  Add to Gallery
+                  {isUploading ? (
+                    <>
+                      <span className="material-symbols-outlined animate-spin">progress_activity</span>
+                      Uploading...
+                    </>
+                  ) : (
+                    "Add to Gallery"
+                  )}
                 </button>
               </div>
             </form>

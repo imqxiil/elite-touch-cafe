@@ -13,6 +13,7 @@ interface GalleryContextType {
   images: GalleryImage[];
   loading: boolean;
   addImage: (src: string, alt: string) => Promise<void>;
+  uploadImageFile: (file: File, alt: string) => Promise<void>;
   deleteImage: (id: string) => Promise<void>;
 }
 
@@ -56,13 +57,33 @@ export function GalleryProvider({ children }: { children: React.ReactNode }) {
     if (res.ok) await fetchImages();
   };
 
+  const uploadImageFile = async (file: File, alt: string) => {
+    const fileExt = file.name.split('.').pop();
+    const fileName = `${Math.random().toString(36).substring(2, 15)}-${Date.now()}.${fileExt}`;
+    
+    const { error: uploadError } = await supabase.storage
+      .from('cafe-images')
+      .upload(fileName, file);
+      
+    if (uploadError) {
+      console.error("Upload error:", uploadError);
+      throw uploadError;
+    }
+    
+    const { data: publicUrlData } = supabase.storage
+      .from('cafe-images')
+      .getPublicUrl(fileName);
+      
+    await addImage(publicUrlData.publicUrl, alt);
+  };
+
   const deleteImage = async (id: string) => {
     const res = await fetch(`/api/gallery?id=${id}`, { method: "DELETE" });
     if (res.ok) await fetchImages();
   };
 
   return (
-    <GalleryContext.Provider value={{ images, loading, addImage, deleteImage }}>
+    <GalleryContext.Provider value={{ images, loading, addImage, uploadImageFile, deleteImage }}>
       {children}
     </GalleryContext.Provider>
   );
